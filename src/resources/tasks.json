@@ -1,8 +1,29 @@
 [
     {
+        "id" : 1,
         "name" : "Piano",
-        "date" : "20/04/2021",
+        "description": "Nam consequat nunc mauris, eu tincidunt elit bibendum nec. Fusce hendrerit laoreet interdum. Sed et tortor hendrerit, congue dui in, laoreet massa. Fusce tellus lectus, faucibus eget felis non, porta mollis orci. Praesent sed urna quis nisl interdum auctor ut consectetur eros. Praesent a enim a tellus dapibus lacinia ut eu mauris. Etiam lu",
+        "date" : "20-04-2021",
         "progress" : 0,
-        "tags" : ["musique", "perso"]
+        "duration" : 90,
+        "tags" : ["musique", "perso"]        
+    },
+    {
+        "id" : 2,
+        "name" : "Read",
+        "description": "urabitur et accumsan turpis, vitae imperdiet erat. Pellentesque eget erat pharetra ligula euismod iaculis.Etiam ultrices nunc non lorem efficitur mollis. Ut",
+        "date" : "20-04-2021",
+        "progress" : 20,
+        "duration" : 30,
+        "tags" : ["livre", "perso"]        
+    },
+    {
+        "id" : 3,
+        "name" : "Meditation",
+        "descrition" : "",
+        "date" : "20-04-2021",
+        "progress" : 0,
+        "duration" : 15,
+        "tags" : ["developpement personnel", "perso"]        
     }
 ]
