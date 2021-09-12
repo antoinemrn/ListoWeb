@@ -12,9 +12,9 @@ const MainScreen = ({tasks} : TaskState)  =>
     return (
         <MainScreenContainer>
             <TaskScreenContainer>
-                <TaskListContainer title={"Todos"} tasks={tasks.filter(x => x.progress === 0)}/>
-                <TaskListContainer title={"In Progress"} tasks={tasks.filter(x => x.progress > 0 && x.progress < 100)}/>
-                <TaskListContainer title={"Done"} tasks={tasks.filter(x => x.progress === 100)}/>
+                <TaskListContainer title={"Todos"} tasks={tasks.filter(x => x.timeLeft === x.duration)}/>
+                <TaskListContainer title={"In Progress"} tasks={tasks.filter(x => x.timeLeft > 0 && x.timeLeft !== x.duration)}/>
+                <TaskListContainer title={"Done"} tasks={tasks.filter(x => x.timeLeft === 0)}/>
             </TaskScreenContainer>  
             <Events/>
         </MainScreenContainer>

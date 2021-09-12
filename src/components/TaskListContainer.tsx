@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import TaskModel from '../models/task';
 import HeaderTaskList from './HeaderTaskList';
@@ -11,11 +11,22 @@ interface TaskListContainerModel{
 }
 
 const TaskListContainer = ({title, tasks} : TaskListContainerModel) => {
+
+
+    const [taskList, setTaskList] = useState(tasks);
+
+    const handleTaskEdit = (data : TaskModel) => {
+        //eslint-disable-next-line
+        const taskIndex = taskList.findIndex(x => x.id == data.id);
+        let newTaskList = [...taskList];
+        newTaskList[taskIndex] = {...newTaskList[taskIndex], ...data};
+        setTaskList(newTaskList);
+    }
     return (
         <div>
             <HeaderTaskList title={title} nbTodos={tasks.length}/>
             <TaskList>
-                {tasks.map( (x : TaskModel) => <Task {...x} key={x.id}></Task>)}
+                {taskList.map( (x : TaskModel) => <Task task={x} key={x.id} handleTaskEdit={handleTaskEdit}></Task>)}
             </TaskList>
         </div>
     )

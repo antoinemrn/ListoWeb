@@ -2,14 +2,15 @@ import styled from "styled-components"
 
 interface ProgressProps {
     completed : number;
+    total: number;
     color: string;
     shadow : string;
 }
 
-const ProgressBar = ({completed, color, shadow} : ProgressProps) => {
+const ProgressBar = ({completed, total, color, shadow} : ProgressProps) => {
     return (
         <Container>
-            <ProgressDiv completed={completed} color={color} shadow={shadow}/>
+            <ProgressDiv completed={completed} total={total} color={color} shadow={shadow}/>
         </Container>
     )
 }
@@ -24,7 +25,7 @@ const ProgressDiv = styled.div<ProgressProps>`
     height: 100%;
     background-color: ${(props : ProgressProps) => props.color};
     box-shadow: 0px 0px 5px ${(props : ProgressProps) => props.completed !== 0 ? 1 : 0}px ${(props : ProgressProps) => props.shadow};
-    width: ${(props : ProgressProps) => props.completed}%;    
+    width: ${(props : ProgressProps) => props.completed/props.total*100}%;    
     border-radius: inherit;
 `;
 
