@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import {TiTick, TiTimes} from 'react-icons/ti';
 import { SubmitHandler, useForm } from 'react-hook-form';
 
-import TaskModel from '../models/task';
+import TaskModel from '../models/todo';
 import ProgressBar from './ProgressBar';
 import Tag from './Tag';
 

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import {TiPencil} from 'react-icons/ti';
 
 
-import TaskModel from '../models/task';
+import TaskModel from '../models/todo';
 import ProgressBar from './ProgressBar';
 import Tag from './Tag';
 

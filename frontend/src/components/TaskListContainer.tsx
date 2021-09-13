@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import TaskModel from '../models/task';
+import TaskModel from '../models/todo';
 import HeaderTaskList from './HeaderTaskList';
 import Task from './Task';
 

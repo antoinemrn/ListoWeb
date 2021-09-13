@@ -1,4 +1,4 @@
-interface Task {
+interface Todo {
     id : number;
     name :string;
     description: string;
@@ -8,4 +8,4 @@ interface Task {
     tags : string[];
 }
 
-export default Task;
+export default Todo;

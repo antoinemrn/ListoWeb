@@ -1,14 +1,12 @@
 import styled from 'styled-components';
 import {BrowserRouter , Route} from 'react-router-dom';
-import {FaListUl} from 'react-icons/fa'
+import {FaListUl} from 'react-icons/fa';
 
 import NavBar from './components/NavBar';
 import MainScreen from './screen/MainScreen';
 
-import taskMock from './resources/tasks.json';
+function App() {  
 
-
-function App() {
   return (
     <MainPage>
       <BrowserRouter>
@@ -21,7 +19,7 @@ function App() {
           </Header>        
           <Content>
             <Route path="/taskList">
-              <MainScreen tasks={taskMock}></MainScreen>
+              <MainScreen></MainScreen>
             </Route>
           </Content>
       </BrowserRouter >      

@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import styled from 'styled-components';
 
-import TaskModel from '../models/task';
+import TaskModel from '../models/todo';
 import TaskEdit from './TaskEdit';
 import TaskView from './TaskView';
 
