@@ -20,14 +20,14 @@ interface HeaderProps {
 
 const TodosCount = styled.span`
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.4);
+    color: rgba(0, 0, 0, 0.4);
     font-size: 1.2em;
   
 `;
 const Title = styled.div`
     display: inline-block;
     font-weight: bold;
-    color: white;
+    color: #000000;
     margin-bottom: 10px;
     font-size: 1.2em;
 `;

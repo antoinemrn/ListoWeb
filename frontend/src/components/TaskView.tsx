@@ -27,7 +27,7 @@ const TaskView = ({task, handleEdit}: TaskViewProps) => {
             </TaskHeader>
             <TaskDescription>{task.description}</TaskDescription>
             <TaskDuration><b>{task.timeLeft}</b> minutes left</TaskDuration>
-            <ProgressBar completed={task.duration - task.timeLeft} total={task.duration} color="#ffff00" shadow="#ffff00"></ProgressBar><br/>
+            <ProgressBar completed={task.duration - task.timeLeft} total={task.duration} colorStart="#92FFC0" colorEnd="#00af75"></ProgressBar><br/>
             <div>{task.tags.map(x => <Tag name={x} key={x}></Tag>)}</div>
         </>
     )
@@ -35,27 +35,28 @@ const TaskView = ({task, handleEdit}: TaskViewProps) => {
 
 const TaskHeader = styled.div`
     display: grid;
+    
     grid-template-columns: 1fr auto;  
     & > svg {
         height: 100%;
-        color: #dc143c92;
+        color: #006946;
     }
     & > svg:hover {
         height: 100%;
-        color: #dc143c;
+        color: #00af75;
         cursor: pointer;
     }
 `;
 
 const TaskTitle = styled.div`
     font-weight: bold;
-    color: white;    
+    color: black;    
 `;
 
 const TaskDescription = styled.div`
     font-style: italic;
     font-size: 0.8em;
-    color: #c2c2c2;  
+    color: #a3a3a3;  
     max-width: 100%;
     max-height: 100px;
     overflow: hidden;
@@ -65,7 +66,7 @@ const TaskDescription = styled.div`
 const TaskDuration = styled.div`
     margin-top: 5px;
     margin-bottom: 5px;
-    color : white;
+    color : #000000;
 `;
 
 export default TaskView;

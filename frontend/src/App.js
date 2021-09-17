@@ -4,6 +4,7 @@ import {FaListUl} from 'react-icons/fa';
 
 import NavBar from './components/NavBar';
 import MainScreen from './screen/MainScreen';
+import AddTask from './screen/AddTask';
 
 function App() {  
 
@@ -19,7 +20,10 @@ function App() {
           </Header>        
           <Content>
             <Route path="/taskList">
-              <MainScreen></MainScreen>
+              <MainScreen/>
+            </Route>
+            <Route path="/addTask">
+              <AddTask/>
             </Route>
           </Content>
       </BrowserRouter >      
@@ -39,15 +43,15 @@ const NavBrand = styled.div`
   grid-template-columns: 10% 1fr;
   grid-gap: 5px;
   align-items: center;
-  filter: drop-shadow(0px 0px 30px crimson);
+  filter: drop-shadow(0px 0px 30px #00af75);
   & > svg {
-    color: crimson;    
+    color: #00af75;    
     width: 80%;
     height: 100%;
   }
 `;
 const NavTitle = styled.div`  
-  color: white;
+  color: #00af75;
   font-weight: bold;
   font-size: 2em;  
 `;
@@ -56,6 +60,7 @@ const NavTitle = styled.div`
 const Header = styled.div`
   display: grid;
   grid-template-columns: 30% 1fr 30%;
+  background-color: white;
 `;
 
 const Content = styled.div`

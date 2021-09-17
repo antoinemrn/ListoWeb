@@ -14,26 +14,27 @@ const NavBar = () => {
 const NavLinkContainer = styled.div`
     display: grid;
     grid-auto-flow: column;
+    
 `;
 
 const NavLinkStyled = styled(NavLink)`
     display: block;
     padding: 25px;
     text-align: center;
-    color: #ffffff;
+    color: black;
     text-decoration: none;
     &:hover, 
     &.active{
-        background: rgba(255, 255, 255, 0.05);
+        background: #F8F7F6;
         backdrop-filter: blur(15px);
     }
     &:visited {
-        color: #ffffff;
+        color: black;
         text-decoration: none;
     }
     &.active {
         font-weight: bold;
-        border-top: solid 5px crimson;
+        border-top: solid 5px #00af75;
     }
 `;
 

@@ -3,28 +3,26 @@ import styled from "styled-components"
 interface ProgressProps {
     completed : number;
     total: number;
-    color: string;
-    shadow : string;
+    colorStart: string;
+    colorEnd : string;
 }
 
-const ProgressBar = ({completed, total, color, shadow} : ProgressProps) => {
+const ProgressBar = ({completed, total, colorStart, colorEnd} : ProgressProps) => {
     return (
         <Container>
-            <ProgressDiv completed={completed} total={total} color={color} shadow={shadow}/>
+            <ProgressDiv completed={completed} total={total} colorStart={colorStart} colorEnd={colorEnd}/>
         </Container>
     )
 }
 const Container = styled.div`
     height: 10px;
-    background-color: rgba(0, 0, 0, 0.342);
-    border: solid 1px rgba(255, 255, 255, 0.493);
+    background-color: rgba(0, 0, 0, 0.068);
     border-radius: 10px;
 `;
 
 const ProgressDiv = styled.div<ProgressProps>`   
     height: 100%;
-    background-color: ${(props : ProgressProps) => props.color};
-    box-shadow: 0px 0px 5px ${(props : ProgressProps) => props.completed !== 0 ? 1 : 0}px ${(props : ProgressProps) => props.shadow};
+    background-image: ${(props : ProgressProps) => `linear-gradient( 135deg, ${props.colorStart} 10%, ${props.colorEnd} 100%)`} ;
     width: ${(props : ProgressProps) => props.completed/props.total*100}%;    
     border-radius: inherit;
 `;

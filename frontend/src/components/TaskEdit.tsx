@@ -35,7 +35,7 @@ const TaskEdit = ({task, handleCancel, handleTaskEdit}: TaskViewProps) => {
             <TaskDescription defaultValue={task.description} {...register("description")}/>
             <TaskDuration><FormInput type="text" defaultValue={task.timeLeft}  {...register("timeLeft", {min : 0, max : task.duration})}/> minutes left</TaskDuration>
             <ErrorMessage>{errors.timeLeft && `Time left must be between 0 and ${task.duration}`}</ErrorMessage>
-            <ProgressBar completed={task.duration - task.timeLeft} total={task.duration} color="#ffff00" shadow="#ffff00"></ProgressBar><br/>
+            <ProgressBar completed={task.duration - task.timeLeft} total={task.duration} colorStart="#92FFC0" colorEnd="#00af75"></ProgressBar><br/>
             <div>{task.tags.map(x => <Tag name={x} key={x}></Tag>)}</div>
             <input type="hidden" {...register("id")} value={task.id}/>            
         </form>
@@ -68,32 +68,38 @@ const FormInput = styled.input`
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
     font-weight: bold;
-    color: white !important;    
+    color: black !important;    
     border: none;
-    background-color: transparent !important;
-    border-bottom: solid 1px white;
+    border-radius: 5px;
+    background-color: #d3d3d360;  
     &:focus {
         outline: none;
     }
 `;
 
 const TaskDescription = styled.textarea`
-    font-style: italic;
-    color: white;
-    font-size: 0.8em; 
-    margin-top: 5px;
+    margin-top:  10px;
+    color: black;
+    font-size: 1em; 
     resize: none;
-    width: 100%;
+    width: 95%;
     height: 100px;
-    background-color: transparent;
-    border: solid 1px white;
+    padding: 10px;
+    background-color: #d3d3d360;
     border-radius: 5px;
+    border: none;
+    &::placeholder {
+        color: #bebebe;
+    }
+    &:focus {
+        outline: none;
+    }
 `;
 
 const TaskDuration = styled.div`
     margin-top: 5px;
     margin-bottom: 5px;
-    color : white;
+    color : black;
 `;
 
 const ErrorMessage = styled.span`

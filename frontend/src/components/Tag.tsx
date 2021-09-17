@@ -16,7 +16,7 @@ const Tag = ({name}: TagProps) => {
 
 const TagContainer = styled.div`
     display: inline-block;
-    background-color: rgb(236, 163, 79);
+    background-color: #00af75;
     padding: 5px;
     color: white;
     border-radius: 5px;

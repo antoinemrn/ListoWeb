@@ -38,9 +38,7 @@ const Task = ({task, handleTaskEdit} : TaskProps) =>
 
 const TaskContainer = styled.div`
   padding: 10px;
-  background: rgba(255, 255, 255, 0.05);
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgb(255, 255, 255);
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(15px);
   border-radius: 5px;

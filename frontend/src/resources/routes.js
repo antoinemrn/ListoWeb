@@ -4,8 +4,8 @@ export const routes = [
         'name' : 'Task List'
     },
     {
-        'path' : 'Test',
-        'name' : 'Test 1'
+        'path' : 'addTask',
+        'name' : 'Add Task'
     },
     {
         'path' : 'Test2',
